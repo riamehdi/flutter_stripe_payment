@@ -200,10 +200,10 @@ public class Converters {
       .addressState(getValue(cardData, "addressState"))
       .addressZip(getValue(cardData, "addressZip"))
       .addressCountry(getValue(cardData, "addressCountry"))
-      .brand(CardBrand.valueOf(getValue(cardData, "brand")))
+      .brand(getValue(cardData, "brand") != null ? CardBrand.valueOf(getValue(cardData, "brand")) : null)
       .last4(getValue(cardData, "last4"))
       .fingerprint(getValue(cardData, "fingerprint"))
-      .funding(CardFunding.valueOf(getValue(cardData, "funding")))
+      .funding(getValue(cardData, "funding") != null ? CardFunding.valueOf(getValue(cardData, "funding")) : null)
       .country(getValue(cardData, "country"))
       .currency(getValue(cardData, "currency"))
       .id(getValue(cardData, "id"))
@@ -311,7 +311,7 @@ public class Converters {
 
     // Omitted (can be introduced later): card.checks, card.threeDSecureUsage, card.wallet
 
-    wm.putString("brand", card.brand);
+    wm.putString("brand", card.brand.getCode());
     wm.putString("country", card.country);
     wm.putInt("expMonth", card.expiryMonth);
     wm.putInt("expYear", card.expiryYear);
@@ -429,7 +429,7 @@ public class Converters {
     }
 
     map.putInt("attemptsRemaining", codeVerification.getAttemptsRemaining());
-    map.putString("status", codeVerification.getStatus());
+    map.putString("status", codeVerification.getStatus().name());
 
     return map;
   }
