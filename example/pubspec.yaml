@@ -2,8 +2,8 @@ name: stripe_payment_example
 description: Demonstrates how to use the stripe_payment plugin.
 
 environment:
-  sdk: ">=2.6.0 <3.0.0"
-  flutter: ">=1.12.13+hotfix.5 <2.0.0"
+  sdk: '>=2.6.0 <3.0.0'
+  flutter: '>=1.12.13+hotfix.5 <2.0.0'
 
 dependencies:
   flutter:
@@ -58,5 +58,5 @@ flutter:
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
-  # For details regarding fonts from package dependencies, 
+  # For details regarding fonts from package dependencies,
   # see https://flutter.io/custom-fonts/#from-packages
