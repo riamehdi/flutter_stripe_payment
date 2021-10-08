@@ -19,7 +19,7 @@
 // - https://stripe.com/docs/building-plugins#setappinfo
 NSString * const TPSAppInfoName = @"flutter_stripe_payment";
 NSString * const TPSAppInfoPartnerId = @"flutter_stripe_payment";
-NSString * const TPSAppInfoURL = @"https://github.com/jonasbark/flutter_stripe_payment";
+NSString * const TPSAppInfoURL = @"https://github.com/riamehdi/flutter_stripe_payment";
 NSString * const TPSAppInfoVersion = @"1.x";
 
 typedef NSString * TPSErrorKey NS_EXTENSIBLE_STRING_ENUM;
