@@ -202,7 +202,7 @@ class _MyAppState extends State<MyApp> {
                           StripePayment.confirmPaymentIntent(
                             PaymentIntent(
                               clientSecret: _paymentIntentClientSecret,
-                              paymentMethodId: _paymentMethod!.id!,
+                              paymentMethodId: _paymentMethod.id,
                               isSavingPaymentMethod: true,
                             ),
                           ).then((paymentIntent) {

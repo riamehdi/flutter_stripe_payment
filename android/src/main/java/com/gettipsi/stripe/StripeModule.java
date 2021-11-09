@@ -201,7 +201,6 @@ public class StripeModule extends ReactContextBaseJavaModule {
 
       mStripe.createCardToken(
         createCard(cardData),
-        mPublicKey,
         new ApiResultCallback<Token>() {
           public void onSuccess(Token token) {
             promise.resolve(convertTokenToWritableMap(token));
@@ -224,7 +223,6 @@ public class StripeModule extends ReactContextBaseJavaModule {
 
       mStripe.createBankAccountToken(
         createBankAccount(accountData),
-        mPublicKey,
         null,
         new ApiResultCallback<Token>() {
           public void onSuccess(Token token) {
